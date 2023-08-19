@@ -3,36 +3,36 @@ var ExtractTextPlugin = require('sgmf-scripts')['extract-text-webpack-plugin'];
 var sgmfScripts = require('sgmf-scripts');
 
 module.exports = [{
-  mode: 'none',
-  name: 'scss',
-  entry: sgmfScripts.createScssPath(),
-  output: {
-    path: path.resolve('./cartridges/plugin_pd_training/cartridge/static'),
-    filename: '[name].css'
-  },
-  module: {
-    rules: [{
-      test: /\.scss$/,
-      use: ExtractTextPlugin.extract({
-        use: [{
-          loader: 'css-loader',
-          options: {
-            url: false
-          }
-        }, {
-          loader: 'postcss-loader',
-          options: {
-            plugins: [
-              require('autoprefixer')()
-            ]
-          }
-        }, {
-          loader: 'sass-loader'
+    mode: 'none',
+    name: 'scss',
+    entry: sgmfScripts.createScssPath(),
+    output: {
+        path: path.resolve('./cartridges/plugin_pd_training/cartridge/static'),
+        filename: '[name].css'
+    },
+    module: {
+        rules: [{
+            test: /\.scss$/,
+            use: ExtractTextPlugin.extract({
+                use: [{
+                    loader: 'css-loader',
+                    options: {
+                        url: false
+                    }
+                }, {
+                    loader: 'postcss-loader',
+                    options: {
+                        plugins: [
+                            require('autoprefixer')()
+                        ]
+                    }
+                }, {
+                    loader: 'sass-loader'
+                }]
+            })
         }]
-      })
-    }]
-  },
-  plugins: [
-    new ExtractTextPlugin({ filename: '[name].css' })
-  ]
+    },
+    plugins: [
+        new ExtractTextPlugin({ filename: '[name].css' })
+    ]
 }];

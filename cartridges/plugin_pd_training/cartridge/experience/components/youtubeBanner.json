@@ -1,0 +1,62 @@
+{
+  "name": "Youtube Banner",
+  "description": "Banner plays Youtube videos in storefront site",
+  "group": "commerce_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "youtubeBannerConfigurations",
+      "name": "Youtube Banner Configurations",
+      "description": "This is a component will host a Youtube video.",
+      "attribute_definitions": [
+        {
+          "id": "videoId",
+          "name": "The Youtube video ID",
+          "description": "Provide the YouTube video ID that identifies the video that the player will load.",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "videoWidth",
+          "name": "The width of the video player",
+          "description": "Provide the width of the video player or set 0 for 100% width. The default value is 100%.",
+          "type": "integer",
+          "required": false,
+          "default_value": 0
+        },
+        {
+          "id": "videoHeight",
+          "name": "The height of the video player",
+          "description": "Provide the height of the video player. The default value is 390.",
+          "type": "integer",
+          "required": false,
+          "default_value": 390
+        },
+        {
+          "id": "autoplay",
+          "name": "Automatically start playing video",
+          "description": "Automatically start playing video when the player loads.",
+          "type": "boolean",
+          "required": false,
+          "default_value": false
+        },
+        {
+          "id": "playerControls",
+          "name": "Display player controls",
+          "description": "isplay player controls in the video player.",
+          "type": "boolean",
+          "required": false,
+          "default_value": false
+        },
+        {
+          "id": "videoLoop",
+          "name": "Loop the Video",
+          "description": "Loop to play video again and again.",
+          "type": "boolean",
+          "required": false,
+          "default_value": false
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}

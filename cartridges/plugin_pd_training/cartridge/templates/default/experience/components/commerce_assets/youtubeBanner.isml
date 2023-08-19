@@ -1,0 +1,16 @@
+<div class="mainbanner-container">
+    <div class="row">
+        <div class="col-12">
+            <div class="mainbanner-figure image-component">
+                <iframe id="ytplayer" type="text/html"
+                    width="${pdict.videoWidth || '100%'}"
+                    height="${pdict.videoHeight}"
+                    src="https://www.youtube.com/embed/${pdict.videoId}?autoplay=${pdict.autoplay}&controls=${pdict.playerControls}&loop=${pdict.videoLoop}"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
+            </div>
+        </div>
+    </div>
+</div>
