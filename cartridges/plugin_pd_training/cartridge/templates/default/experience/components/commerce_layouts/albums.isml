@@ -11,7 +11,7 @@
     </isif>
 
     <isprint
-        value="${pdict.regions.albums.setClassName('row d-flex justify-content-center').render()}"
+        value="${pdict.regions.albums.setClassName('row d-flex justify-content-center mb-4').render()}"
         encoding="off"
     />
 </div>

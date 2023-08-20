@@ -3,7 +3,7 @@
     assets.addCss('/css/experience/components/commerceAssets/albumTile.css');
 </isscript>
 
-<div class="card mb-4 shadow-sm album-tile-container">
+<div class="card mb-0 h-100 shadow-sm album-tile-container">
     <div class="card-img-top">
         <figure class="album-figure image-component">
             <picture>
