@@ -2,10 +2,37 @@
 
 This repository contains the sample component types for Salesforce B2C Commerce Page Designer. Including a Youtube banner and an Album layout with its component.
 
+1. Youtube Banner Component
+
+| Field Name | Required |
+| --- | --- |
+| The Youtube Video ID | Yes |
+| The width of the video player | No |
+| The height of the video player | No |
+| Automatically start playing video | No |
+| Display player controls | No |
+| Loop the Video | No |
+
+2. Albums Layout Component
+
+| Field Name | Required |
+| --- | --- |
+| Heading Text | No |
+
+3. Album tile with caption and action Component
+
+| Field Name | Required |
+| --- | --- |
+| Image | Yes |
+| Alt Text | No |
+| Text Below Image | No |
+| Action Button Text | No |
+| Action Button Link | No |
+
 ## Compatibility
 
-- This cartridge works with SFRA v6 and newer.
-- This cartridge works with a compatibility mode of 18.10 and newer.
+* This cartridge works with SFRA v6 and newer.
+* This cartridge works with a compatibility mode of 18.10 and newer.
 
 ## Get Started
 
