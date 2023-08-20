@@ -1,0 +1,38 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerceAssets/albumTile.css');
+</isscript>
+
+<div class="card mb-4 shadow-sm album-tile-container">
+    <div class="card-img-top">
+        <figure class="album-figure image-component">
+            <picture>
+                <source srcset="${pdict.albumImage.src.tablet}" media="(min-width: 768px)"/>
+                <source srcset="${pdict.albumImage.src.desktop}" media="(min-width: 1024px)"/>
+                <isset name="imageName" value="${Resource.msg('album.image.alt','album',null)}" scope="page"/>
+                <a href="${pdict.actionBtnLink}" aria-label="${Resource.msgf('album.image.link','album', null, pdict.albumImageAlt ? pdict.albumImageAlt : imageName)}">
+                    <img
+                        class="album-image image-fluid common-image-component"
+                        src="${pdict.albumImage.src.mobile}"
+                        style="--focal-point-x:${pdict.albumImage.focalPointX}; --focal-point-y:${pdict.albumImage.focalPointY}"
+                        alt="${pdict.albumImageAlt ? pdict.albumImageAlt : imageName}" title="${pdict.albumImageAlt ? pdict.albumImageAlt : imageName}"
+                    />
+                </a>
+            </picture>
+        </figure>
+    </div>
+    <div class="card-body">
+        <isif condition="${pdict.albumText}">
+            <div class="card-text">
+                <isprint value="${pdict.albumText ? pdict.albumText : ''}" encoding="off"/>
+            </div>
+        </isif>
+        <isif condition="${pdict.actionBtnText}">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <a class="btn btn-sm btn-outline-secondary" href="${pdict.actionBtnLink}" role="button">${pdict.actionBtnText ? pdict.actionBtnText : ''}</a>
+                </div>
+            </div>
+        </isif>
+    </div>
+</div>

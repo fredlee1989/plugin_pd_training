@@ -1,0 +1,17 @@
+<isscript>
+    var albumRegion = pdict.regions.albums;
+    albumRegion.setComponentClassName("col-md-6 col-lg-4 album-tile");
+</isscript>
+
+<div class="container albums-layout">
+    <isif condition="${pdict.textHeadline}">
+        <div class="albums-layout-heading">
+            <h3>${pdict.textHeadline}</h3>
+        </div>
+    </isif>
+
+    <isprint
+        value="${pdict.regions.albums.setClassName('row d-flex justify-content-center').render()}"
+        encoding="off"
+    />
+</div>

@@ -1,0 +1,50 @@
+{
+  "name": "Album tile with caption and action",
+  "description": "Album tile with supporting text below the image and the action button to link to additional content.",
+  "group": "commerce_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "albumConfig",
+      "name": "Album Configurations",
+      "description": "Specify the album content to be displayed.",
+      "attribute_definitions": [
+        {
+          "id": "albumImage",
+          "name": "Image",
+          "description": "Select the image to be displayed.",
+          "type": "image",
+          "required": true
+        },
+        {
+          "id": "albumImageAlt",
+          "name": "Alt Text",
+          "description": "The image alt text shown by the component.",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "albumText",
+          "name": "Text Below Image",
+          "description": "The album text shown by the component.",
+          "type": "markup",
+          "required": false
+        },
+        {
+          "id": "actionBtnText",
+          "name": "Action Button Text",
+          "description": "The action button text shown by the component.",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "actionBtnLink",
+          "name": "Action Button Link",
+          "description": "The action button link to link to additional content.",
+          "type": "url",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}
